@@ -1,3 +1,6 @@
+# Ethan Willingham
+# CWID: ck3935xm
+# Date: 07/05/2023
 # Real-Time Message Transmission with UDP Sockets and MD5 Checksum Validation
 
 This repo contains client and server UDP python scripts. These scripts use MD5 checksum validation and demonstrate real-time message transmission.

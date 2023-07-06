@@ -1,11 +1,13 @@
-import hashlib
+# Ethan Willingham
+# CWID: ck3935xm
+# Date: 07/05/2023
+# Description: This is a UDP client that sends a message and checksum to a server, then receives a message back from the server and prints round trip time
 import time
 import sys
 import socket
+import hashlib
 
-
-def checksum(data):
-    md5 = hashlib.md5()
+def checksum(data, md5):
     md5.update(data)
     return md5.hexdigest()
 
@@ -19,7 +21,8 @@ if __name__ == "__main__":
     message = sys.argv[3].encode('utf-8') # changes from string to binary
 
     try: # using try so that if error occurs, it will print the error
-        checksum = checksum(message) # takes bianary input message and returns checksum(md5 hexadecimal hash)
+        md5 = hashlib.md5()
+        checksum = checksum(message, md5) # takes bianary input message and returns checksum(md5 hexadecimal hash)
         print("checksum sent: ", checksum)
         start = time.time()
         roundTripTime = (time.time() - start) * 1000000  # Convert to microseconds rtt stands for
