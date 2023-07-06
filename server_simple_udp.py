@@ -1,7 +1,3 @@
-# Ethan Willingham
-# CWID: ck3935xm
-# Date: 07/05/2023
-# Description: This is a simple UDP server that receives a message and checksum from a client, checks if they match and sends back to client, otherwise it sends a 0 to the client
 import hashlib
 import sys
 import socket
