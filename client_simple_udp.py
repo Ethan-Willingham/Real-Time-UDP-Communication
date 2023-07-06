@@ -1,7 +1,3 @@
-# Ethan Willingham
-# CWID: ck3935xm
-# Date: 07/05/2023
-# Description: This is a UDP client that sends a message and checksum to a server, then receives a message back from the server and prints round trip time
 import time
 import sys
 import socket
